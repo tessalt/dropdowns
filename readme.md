@@ -1,6 +1,8 @@
 Dropdown menus: responsive, accessible, multi-level
 ===========================
-Code to hopefully be improved with more flexibility, currently just copied and pasted from a project. 
+Code to hopefully be improved with greater flexibility, currently just copied and pasted from a project. 
+
+<a href="http://tessathornton.com/demos/dropdowns/">Demo</a>
 
 ##Features: 
 
@@ -10,9 +12,11 @@ Code to hopefully be improved with more flexibility, currently just copied and p
 * At breakpoint, menu is hidden by default, shown when "Menu" link is clicked
 * Screen reader accessible 
 
-##Note
+##Notes
 Adjust breakpoints in **both** css and js file. 
+
 jQuery is required. 
+
 Pending further browser testing. So far has been tested in:
 
 * Modern Firefox/Chrome/Safari/Opera
