@@ -1,22 +1,29 @@
 body, nav, ul, li, a  {margin: 0; padding: 0;}
 body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 a {text-decoration: none;}
+.container {
+    width: 90%;
+    max-width: 980px;
+    margin: 10px auto;
+}
 .toggleMenu {
     display:  none;
+    background: #666;
+    padding: 10px 15px;
+    color: #fff;
 }
 .nav {
     list-style: none;
+     *zoom: 1;
+     background:#002a5c;
 }
 .nav:before,
 .nav:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " "; 
+    display: table; 
 }
 .nav:after {
     clear: both;
-}
-.nav {
-    *zoom: 1;
 }
 .nav ul {
     list-style: none;
@@ -31,13 +38,13 @@ a {text-decoration: none;}
     float: left;
 }
 .nav > li > a {
-    display: inline-block;
+    display: block;
 }
 .nav > li > ul {
     position: absolute;
     left: -9999px;
 }
-.nav > .parent:hover > ul {
+.nav > .parent.hover > ul {
     left: 0;
 }
 .nav li li ul {
@@ -47,15 +54,32 @@ a {text-decoration: none;}
 .nav li .parent {
     position:relative;
 }
-.nav li .parent:hover ul {
+.nav li .parent.hover ul {
     left: 100%;
     top: 0;
 }
 .nav li li a {
     display: block;
     background: #00418f;
+    position: relative;
+    z-index:100;
 }
 
 .nav li li li a {
     background:#0059c2;
+    z-index:200;
+}
+
+@media screen and (max-width: 768px) {
+    .nav > li {
+        float: none;
+    }
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > .parent.hover > ul , .nav li .parent.hover ul {
+        position: static;
+    }
+
 }

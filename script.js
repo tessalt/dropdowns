@@ -1,16 +1,15 @@
 $(function() {
-	if ($(window).width() < 600) {
+	if ($(window).width() < 768) {
+		$(".toggleMenu").css("display", "inline-block");
 		$(".nav").hide();
-		$(".toggleMenu").click(function(e) {
+		$(".toggleMenu").click(function() {
 			$(".nav").toggle();
-			e.preventDefault();
 		});
-		$(".parent > a, .subParent > a").click(function(e){
-			$(this).parent().toggleClass("hover");
-			e.preventDefault();
-		})
+		$(".nav .parent a").click(function(){
+			$(this).parent("li").toggleClass("hover");
+		});
 	} else {
-		$(".parent, .subParent").hover(function(){
+		$(".nav .parent").hover(function() {
 			$(this).addClass("hover");
 		}, function() {
 			$(this).removeClass("hover");
