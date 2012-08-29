@@ -1,74 +1,61 @@
 body, nav, ul, li, a  {margin: 0; padding: 0;}
 body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+a {text-decoration: none;}
 .toggleMenu {
     display:  none;
 }
-.nav, .subLvlNav, .btmLvlNav {
+.nav {
     list-style: none;
 }
+.nav:before,
+.nav:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.nav:after {
+    clear: both;
+}
+.nav {
+    *zoom: 1;
+}
+.nav ul {
+    list-style: none;
+}
+.nav a {
+    padding: 10px 15px;
+    color:#fff;
+}
 .nav > li {
+    position: relative;
+    background: #002a5c;
     float: left;
 }
-.topLvlItem {
-    position: relative;
-    z-index: 200;
+.nav > li > a {
+    display: inline-block;
 }
-.topLvlItem a {
-    color: #FFFFFF;
-    display: block;
-    font-size: 18px;
-    padding: 6px 20px 6px 20px;
-    text-decoration: none;
-    background-color: #444;
-}
-.subLvlNav {
-    left: -9999px;
+.nav > li > ul {
     position: absolute;
-    top: 100%;
-    width: 12em;
-    z-index: 100;
+    left: -9999px;
 }
-.parent.hover .subLvlNav {
+.nav > .parent:hover > ul {
     left: 0;
 }
-.subLvlNav a {
-    background: #222;
-    display: block;
-    padding: 5px 10px;
-}
-.subLvlItem {
-    position: relative;
-}
-.subParent.hover .btmLvlNav {
-    left: 100%;
-}
-.btmLvlNav {
+.nav li li ul {
+    position:absolute;
     left: -9999px;
-    position: absolute;
+}
+.nav li .parent {
+    position:relative;
+}
+.nav li .parent:hover ul {
+    left: 100%;
     top: 0;
-    width: 12em;
 }
-.btmLvlNav a {
-    background-color: #888;
+.nav li li a {
+    display: block;
+    background: #00418f;
 }
-@media screen and (max-width: 600px) {
-    .nav li {
-        float: none;
-    }
-    .topLvlItem .subLvlNav, .subLvlItem .btmLvlNav {
-        display: none;
-        left: 0;
-        margin-bottom: 0;
-        position: static;
-        width: 100%;
-    }
-    .topLvlItem.hover .subLvlNav, .subLvlItem.hover .btmLvlNav {
-        display: block;
-    }
-    .toggleMenu {
-        display: block;
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 10px;
-    }
+
+.nav li li li a {
+    background:#0059c2;
 }
