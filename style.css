@@ -27,6 +27,7 @@ a {text-decoration: none;}
 }
 .nav ul {
     list-style: none;
+    width: 9em;
 }
 .nav a {
     padding: 10px 15px;
@@ -36,6 +37,7 @@ a {text-decoration: none;}
     position: relative;
     background: #002a5c;
     float: left;
+    border-top: 1px solid #00418f;
 }
 .nav > li > a {
     display: block;
@@ -43,6 +45,7 @@ a {text-decoration: none;}
 .nav > li > ul {
     position: absolute;
     left: -9999px;
+    
 }
 .nav > li.hover > ul {
     left: 0;
@@ -63,11 +66,13 @@ a {text-decoration: none;}
     background: #00418f;
     position: relative;
     z-index:100;
+    border-top: 1px solid #002a5c;
 }
 
 .nav li li li a {
     background:#0059c2;
     z-index:200;
+    border-top: 1px solid #00418f;
 }
 
 @media screen and (max-width: 768px) {
