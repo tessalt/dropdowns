@@ -5,11 +5,11 @@ $(function() {
 		$(".toggleMenu").click(function() {
 			$(".nav").toggle();
 		});
-		$(".nav .parent a").click(function(){
+		$(".nav li a").click(function(){
 			$(this).parent("li").toggleClass("hover");
 		});
 	} else {
-		$(".nav .parent").hover(function() {
+		$(".nav li").hover(function() {
 			$(this).addClass("hover");
 		}, function() {
 			$(this).removeClass("hover");

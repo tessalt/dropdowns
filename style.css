@@ -44,17 +44,17 @@ a {text-decoration: none;}
     position: absolute;
     left: -9999px;
 }
-.nav > .parent.hover > ul {
+.nav > li.hover > ul {
     left: 0;
 }
 .nav li li ul {
     position:absolute;
     left: -9999px;
 }
-.nav li .parent {
+.nav li li {
     position:relative;
 }
-.nav li .parent.hover ul {
+.nav li li.hover ul {
     left: 100%;
     top: 0;
 }
@@ -78,7 +78,7 @@ a {text-decoration: none;}
         display: block;
         width: 100%;
     }
-   .nav > .parent.hover > ul , .nav li .parent.hover ul {
+   .nav > li.hover > ul , .nav li li.hover ul {
         position: static;
     }
 
