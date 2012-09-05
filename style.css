@@ -3,7 +3,7 @@ body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 a {text-decoration: none;}
 .container {
     width: 90%;
-    max-width: 980px;
+    max-width: 900px;
     margin: 10px auto;
 }
 .toggleMenu {
