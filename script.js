@@ -17,17 +17,16 @@ var adjustMenu = function() {
 		$(".nav li a").unbind('click').bind('click', function() {
 			// must be attached to anchor element to prevent bubbling
 			$(this).parent("li").toggleClass("hover");
-			console.log("click");
 		});
 	} 
 
 	else if ($(window).width() >= 768){
 		$(".toggleMenu").css("display", "none");
 		$(".nav").show();
-		$(".nav li").bind('mouseenter mouseleave', function() {
+		$(".nav li a").unbind('click');
+		$(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
 		 	// must be attached to li so that mouseleave is not triggered when hover over submenu
 		 	$(this).toggleClass('hover');
-		 	console.log("hover");
 		});
 	}
 };
@@ -36,5 +35,3 @@ var adjustMenu = function() {
 $(window).bind('load resize orientationchange', function() {
 	adjustMenu();
 });
-
-
