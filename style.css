@@ -35,9 +35,13 @@ a {text-decoration: none;}
 }
 .nav > li {
     position: relative;
-    background: #175e4c;
     float: left;
     border-top: 1px solid #104336;
+}
+.nav > li > .parent {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
 }
 .nav > li > a {
     display: block;
@@ -45,8 +49,8 @@ a {text-decoration: none;}
 .nav > li > ul {
     position: absolute;
     left: -9999px;
-    
 }
+
 .nav > li.hover > ul {
     left: 0;
 }
@@ -78,6 +82,14 @@ a {text-decoration: none;}
 @media screen and (max-width: 768px) {
     .nav > li {
         float: none;
+    }
+    .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav li li .parent {
+        background-image: url("images/downArrow.png");
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
     }
     .nav ul {
         display: block;

@@ -1,5 +1,11 @@
 var adjustMenu = function() {
 
+	$(".nav li  a").each(function() {
+		if ($(this).next().length > 0) {
+			$(this).addClass("parent");
+		};
+	})
+	
 	$(".toggleMenu").click(function(e) {
 		// can't use toggle because we don't know original state
 		e.preventDefault();
