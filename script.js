@@ -1,18 +1,40 @@
-$(function() {
+var adjustMenu = function() {
+
+	$(".toggleMenu").click(function(e) {
+		// can't use toggle because we don't know original state
+		e.preventDefault();
+		if ($(".nav").css("display") === "none") {
+			$(".nav").show();
+		} else {
+	 		$(".nav").hide();
+	 	}
+	});
+	
 	if ($(window).width() < 768) {
 		$(".toggleMenu").css("display", "inline-block");
 		$(".nav").hide();
-		$(".toggleMenu").click(function() {
-			$(".nav").toggle();
-		});
-		$(".nav li a").click(function(){
+		$(".nav li").unbind('mouseenter mouseleave');
+		$(".nav li a").unbind('click').bind('click', function() {
+			// must be attached to anchor element to prevent bubbling
 			$(this).parent("li").toggleClass("hover");
+			console.log("click");
 		});
-	} else {
-		$(".nav li").hover(function() {
-			$(this).addClass("hover");
-		}, function() {
-			$(this).removeClass("hover");
-		})
+	} 
+
+	else if ($(window).width() >= 768){
+		$(".toggleMenu").css("display", "none");
+		$(".nav").show();
+		$(".nav li").bind('mouseenter mouseleave', function() {
+		 	// must be attached to li so that mouseleave is not triggered when hover over submenu
+		 	$(this).toggleClass('hover');
+		 	console.log("hover");
+		});
 	}
+};
+
+
+$(window).bind('load resize orientationchange', function() {
+	adjustMenu();
 });
+
+
