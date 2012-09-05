@@ -15,7 +15,7 @@ a {text-decoration: none;}
 .nav {
     list-style: none;
      *zoom: 1;
-     background:#002a5c;
+     background:#175e4c;
 }
 .nav:before,
 .nav:after {
@@ -35,9 +35,9 @@ a {text-decoration: none;}
 }
 .nav > li {
     position: relative;
-    background: #002a5c;
+    background: #175e4c;
     float: left;
-    border-top: 1px solid #00418f;
+    border-top: 1px solid #104336;
 }
 .nav > li > a {
     display: block;
@@ -63,16 +63,16 @@ a {text-decoration: none;}
 }
 .nav li li a {
     display: block;
-    background: #00418f;
+    background: #1d7a62;
     position: relative;
     z-index:100;
-    border-top: 1px solid #002a5c;
+    border-top: 1px solid #175e4c;
 }
 
 .nav li li li a {
-    background:#0059c2;
+    background:#249578;
     z-index:200;
-    border-top: 1px solid #00418f;
+    border-top: 1px solid #1d7a62;
 }
 
 @media screen and (max-width: 768px) {
