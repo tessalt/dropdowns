@@ -33,8 +33,10 @@ a {text-decoration: none;}
     padding: 10px 15px;
     color:#fff;
 }
-.nav > li {
+.nav li {
     position: relative;
+}
+.nav > li {
     float: left;
     border-top: 1px solid #104336;
 }
@@ -46,20 +48,12 @@ a {text-decoration: none;}
 .nav > li > a {
     display: block;
 }
-.nav > li > ul {
+.nav li  ul {
     position: absolute;
     left: -9999px;
 }
-
 .nav > li.hover > ul {
     left: 0;
-}
-.nav li li ul {
-    position:absolute;
-    left: -9999px;
-}
-.nav li li {
-    position:relative;
 }
 .nav li li.hover ul {
     left: 100%;
@@ -72,7 +66,6 @@ a {text-decoration: none;}
     z-index:100;
     border-top: 1px solid #175e4c;
 }
-
 .nav li li li a {
     background:#249578;
     z-index:200;
@@ -80,6 +73,9 @@ a {text-decoration: none;}
 }
 
 @media screen and (max-width: 768px) {
+    .active {
+        display: block;
+    }
     .nav > li {
         float: none;
     }
