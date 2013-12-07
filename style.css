@@ -1,7 +1,7 @@
-body, nav, ul, li, a  {margin: 0; padding: 0;}
-body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-a {text-decoration: none;}
-.container {
+.dropdowns nav, .dropdowns ul, .dropdowns li, .dropdowns a  {margin: 0; padding: 0;}
+.dropdowns {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.dropdowns a {text-decoration: none;}
+.dropdowns {
     width: 90%;
     max-width: 900px;
     margin: 10px auto;
