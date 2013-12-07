@@ -49,3 +49,7 @@ a.toggleMenu {
 .nav ul {
     width: 9em;
 }
+
+.nav > li > .parent {
+	
+}
