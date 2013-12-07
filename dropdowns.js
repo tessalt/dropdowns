@@ -32,7 +32,7 @@
 					$(this).parent("li").toggleClass("hover");
 				});
 			} 
-			else if (ww >= 768) {
+			else if (ww >= options.toggleWidth) {
 				$(".toggleMenu").css("display", "none");
 				$(".nav").show();
 				$(".nav li").removeClass("hover");
