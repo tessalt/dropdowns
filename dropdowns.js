@@ -48,7 +48,7 @@
 			$(".toggleMenu").click(function(e) {
 				e.preventDefault();
 				$(this).toggleClass("active");
-				$(".nav").toggle();
+				$(this).next(".nav").toggle();
 			});
 			adjustMenu();
 			addParents();
