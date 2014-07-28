@@ -1,21 +1,13 @@
-body, nav, ul, li, a  {margin: 0; padding: 0;}
-body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-a {text-decoration: none;}
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 10px auto;
-}
+.dropdowns nav, .dropdowns ul, .dropdowns li, .dropdowns a  {margin: 0; padding: 0;}
+
+.dropdowns a {text-decoration: none;}
+
 .toggleMenu {
     display:  none;
-    background: #666;
-    padding: 10px 15px;
-    color: #fff;
 }
 .nav {
     list-style: none;
      *zoom: 1;
-     background:#175e4c;
 }
 .nav:before,
 .nav:after {
@@ -27,18 +19,15 @@ a {text-decoration: none;}
 }
 .nav ul {
     list-style: none;
-    width: 9em;
 }
 .nav a {
     padding: 10px 15px;
-    color:#fff;
 }
 .nav li {
     position: relative;
 }
 .nav > li {
     float: left;
-    border-top: 1px solid #104336;
 }
 .nav > li > .parent {
     background-image: url("images/downArrow.png");
@@ -61,15 +50,11 @@ a {text-decoration: none;}
 }
 .nav li li a {
     display: block;
-    background: #1d7a62;
     position: relative;
     z-index:100;
-    border-top: 1px solid #175e4c;
 }
 .nav li li li a {
-    background:#249578;
     z-index:200;
-    border-top: 1px solid #1d7a62;
 }
 
 @media screen and (max-width: 768px) {

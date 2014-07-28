@@ -1,0 +1,55 @@
+/* fonts */
+.dropdowns {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* colors */
+
+/* togle menu button for narrow screens */
+.toggleMenu {
+    background: #666;
+    color: #fff;
+}
+
+/* general navigation background color */
+.nav {
+     background:#175e4c;
+}
+
+/* general navigation link font color */
+.nav a {
+    color:#fff;
+}
+
+/* first level items borders */
+.nav > li {
+    border-top: 1px solid #104336;
+}
+
+/* second level navigation colors */
+.nav li li a {
+    background: #1d7a62;
+    border-top: 1px solid #175e4c;
+}
+
+.nav li li li a {
+    background:#249578;
+    border-top: 1px solid #1d7a62;
+}
+
+/* layout */
+.dropdowns {
+    width: 90%;
+    max-width: 900px;
+    margin: 10px auto;
+}
+
+a.toggleMenu {
+	padding: 10px 15px;
+}
+
+.nav ul {
+    width: 9em;
+}
+
+.nav > li > .parent {
+	
+}

@@ -1,8 +1,7 @@
-Dropdown menus: responsive, accessible, multi-level
-===========================
-Code to hopefully be improved with greater flexibility, currently just copied and pasted from a project. 
+Responsive dropdown navigation menus
+====================================
 
-<a href="http://tessathornton.com/demos/dropdowns/">Demo</a>
+Responsive, accessible, multilevel dropdown menus, skinnable and ready for use.
 
 ##Features: 
 
@@ -11,6 +10,7 @@ Code to hopefully be improved with greater flexibility, currently just copied an
 * Vertical menu activated on touch/click, horizontal menu activated on hover (I'd like to add in detection for touch events, but most touch devices with wider screens also translate hover events into touch)
 * At breakpoint, menu is hidden by default, shown when "Menu" link is clicked (screen refresh required)
 * Screen reader accessible 
+* Easy costumisation: design code separated from necessary layout css code.
 
 ##Notes
 Adjust breakpoints in **both** css and js file. 

@@ -3,10 +3,12 @@
 <head>
 	<title>Dropdowns</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="dropdowns.css">
+	<link rel="stylesheet" type="text/css" href="dropdowns-skin-discrete.css">
+	
 </head>
 <body>
-<div class="container">
+<div class="dropdowns">
 	
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
@@ -194,7 +196,10 @@
 </ul>
 </div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="dropdowns.js"></script>
+<script>
+	$(".dropdowns").dropdowns();
+</script>
 </body>
 </html>
