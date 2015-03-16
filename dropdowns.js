@@ -49,6 +49,7 @@
 				e.preventDefault();
 				$(this).toggleClass("active");
 				$(this).next(".nav").toggle();
+				adjustMenu();
 			});
 			adjustMenu();
 			addParents();
